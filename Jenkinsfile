@@ -1,9 +1,8 @@
 pipeline {
-    agent any
-    tools {
-      maven 'MAVEN_HOME'
-      jdk 'JAVA_HOME'
-    }
+ agent any
+        environment {
+                PATH = "C:/ProgramData/chocolatey/lib/maven/apache-maven-3.8.4 /bin:$PATH"
+            }
     stages {
         stage('Testes e2e') {
             steps {
